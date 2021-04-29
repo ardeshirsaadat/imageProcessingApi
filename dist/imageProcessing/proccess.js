@@ -50,13 +50,13 @@ function resize(imageName, width, height) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 5, , 6]);
-                    outFile = "./converted/" + imageName;
+                    outFile = "./converted/" + imageName + ".jpg";
                     if (!fs_2.default.existsSync(outFile)) return [3 /*break*/, 1];
                     return [2 /*return*/, outFile];
-                case 1: return [4 /*yield*/, fs_1.promises.access("./images/" + imageName)];
+                case 1: return [4 /*yield*/, fs_1.promises.access("./images/" + imageName + ".jpg")];
                 case 2:
                     _a.sent();
-                    return [4 /*yield*/, sharp_1.default("./images/" + imageName).resize(Number(width), Number(height))
+                    return [4 /*yield*/, sharp_1.default("./images/" + imageName + ".jpg").resize(Number(width), Number(height))
                             .toFile(outFile)];
                 case 3:
                     _a.sent();

@@ -8,12 +8,12 @@ async function resize(
     height: number
 ): Promise<string> {
     try {
-        const outFile = `./converted/${imageName}`
+        const outFile = `./converted/${imageName}.jpg`
         if (fs.existsSync(outFile)) {
             return outFile
         } else {
-          await fsPromises.access(`./images/${imageName}`);
-          await sharp(`./images/${imageName}`).resize(Number(width),Number(height))
+          await fsPromises.access(`./images/${imageName}.jpg`);
+          await sharp(`./images/${imageName}.jpg`).resize(Number(width),Number(height))
                                                                 .toFile(outFile)
           return outFile;
         }   

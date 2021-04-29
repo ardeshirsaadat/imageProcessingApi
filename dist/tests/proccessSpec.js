@@ -40,7 +40,17 @@ var proccess_1 = require("./../imageProcessing/proccess");
 it('expects resize function outputs a resolved promise', function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, expectAsync(proccess_1.resize('fjord.jpg', 200, 200)).toBeResolved()];
+            case 0: return [4 /*yield*/, expectAsync(proccess_1.resize('fjord', 200, 200)).toBeResolved()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); });
+it('expects resize function outputs a resolved promise', function () { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, expectAsync(proccess_1.resize('fjordfdadf', 200, 200)).toBeRejected()];
             case 1:
                 _a.sent();
                 return [2 /*return*/];
