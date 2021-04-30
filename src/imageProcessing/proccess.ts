@@ -8,7 +8,7 @@ async function resize(
     height: number
 ): Promise<string> {
     try {
-        const outFile = `./converted/${imageName}.jpg`
+        const outFile = `./converted/${imageName}${width}${height}.jpg`
         if (fs.existsSync(outFile)) {
             return outFile
         } else {

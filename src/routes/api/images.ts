@@ -3,7 +3,7 @@ import { resize } from '../../imageProcessing/proccess'
 import path from 'path'
 const images = express.Router()
 
-images.get('/', (req, res) => {
+images.get('/', (req:express.Request, res:express.Response) => {
     const filename = req.query.filename as string
     const width = (req.query.width as unknown) as number
     const height = (req.query.height as unknown) as number
